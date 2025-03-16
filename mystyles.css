@@ -42,8 +42,8 @@ li {
     font-size: 1.2rem;
     margin: 10px 0;
 }
-body {
-    background: url("./EVOLVEX.gif") no-repeat center center fixed;
+/*body {
+    background: url("") no-repeat center center fixed;
     background-size: cover;
     font-family: Arial, sans-serif;
     color: white;
