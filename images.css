@@ -1,0 +1,95 @@
+/* Style for images */
+/*img {
+    max-width: 100%;  /* Ensures the image is never bigger than its container */
+    /*height: auto;     /* Keeps the aspect ratio intact */
+   /* display: block;   /* Removes extra space below the image */
+    /*margin: 10px auto; /* Centers the image */
+   /* border-radius: 10px; /* Optional: Adds rounded corners */
+    /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow */
+/*}
+*/
+
+/* If you want a fixed smaller size for all images */
+/*.small-image {
+   /* width: 320px; /* Set a fixed width */
+   /* height: 450px; /* Maintain aspect ratio */
+/*}*/
+
+
+/* Stylish background */
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient effect */
+    color: #fff; /* Ensures text is readable on dark background */
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensures full height */
+}
+
+/* Image container for better layout */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds spacing between multiple images */
+    padding: 20px;
+    backdrop-filter: blur(8px); /* Adds a glassmorphism effect */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3); /* Soft depth effect */
+}
+
+/* Global image styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect */
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Small image variant */
+.small-image {
+    width: 320px;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+/* Optional: Circular images */
+.circular-image {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: linear-gradient(135deg, #121212, #1a1a1a);
+    }
+    
+    .image-container {
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.1);
+    }
+
+    img {
+        box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.1);
+    }
+
+    img:hover {
+        box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+    }
+}
