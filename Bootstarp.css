@@ -1,0 +1,207 @@
+
+/* General Styles */
+body {
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #3a7bd5, #00c6ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Animated Gradient Background */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/* Apply background image */
+body {
+    background: url("./evolve.gif") no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero Section - Text Animation */
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.hero p {
+    font-size: 20px;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Stylish Button */
+.btn-primary {
+    background: linear-gradient(135deg, #ff6b6b, #ff4757);
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 107, 107, 0.4);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #ff4757, #e63946);
+    transform: scale(1.08);
+    box-shadow: 0px 6px 15px rgba(255, 71, 87, 0.5);
+}
+
+/* Image Container with Animation */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 15px 30px rgba(255, 255, 255, 0.2);
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(255, 255, 255, 0.1), transparent);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.image-container:hover::before {
+    opacity: 1;
+}
+
+/* Animated Small Image */
+.small-image {
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.small-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Responsive Design for Different Screen Sizes */
+@media (max-width: 992px) {
+    .hero {
+        height: 80vh;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 10px 24px;
+    }
+
+    .image-container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 70vh;
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px 18px;
+    }
+
+    .image-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 60vh;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+
+    .image-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .small-image {
+        width: 100%;
+        height: auto;
+    }
+}
